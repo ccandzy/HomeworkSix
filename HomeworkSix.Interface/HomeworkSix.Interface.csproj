@@ -38,10 +38,21 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="Unity.Interception, Version=5.3.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HomeworkSix.Common\HomeworkSix.Common.csproj">
+      <Project>{57ead625-24d4-41b6-83b6-f05ed4914188}</Project>
+      <Name>HomeworkSix.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HomeworkSix.Model\HomeworkSix.Model.csproj">
+      <Project>{a4b159c2-4765-4151-870d-13710fb85733}</Project>
+      <Name>HomeworkSix.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

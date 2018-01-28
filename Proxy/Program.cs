@@ -1,20 +1,27 @@
 ﻿using HomeworkSix.Factory;
 using HomeworkSix.Interface;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Proxy
+namespace HomeworkSix.AOP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            IUserService userService = SimpleFactory.CreateService();
-            userService = new DecoratorProxy(userService);
-            userService.Register();
+            {
+                #region 装饰器模式实现静态AOP
+                IUserService userService = SimpleFactory.CreateService<IUserService>("IUserService");
+                userService = new DecoratorAOP(userService);
+                userService.Register();
+                #endregion
+            }
+            {
+                #region 延迟代理模式实现静态AOP
+                IUserService userService = new ProxyAOP();
+                userService.Register();
+                #endregion
+            }
+
 
             Console.Read();
         }

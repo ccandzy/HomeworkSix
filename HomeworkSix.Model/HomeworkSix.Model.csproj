@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D16A7B8B-F4B4-4EF1-8B93-220F27466FED}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Proxy</RootNamespace>
-    <AssemblyName>Proxy</AssemblyName>
+    <ProjectGuid>{A4B159C2-4765-4151-870D-13710FB85733}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HomeworkSix.Model</RootNamespace>
+    <AssemblyName>HomeworkSix.Model</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,23 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DecoratorAOP.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProxyAOP.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HomeworkSix.Factory\HomeworkSix.Factory.csproj">
-      <Project>{850f22d1-9960-4d9c-9e57-8611f7651eae}</Project>
-      <Name>HomeworkSix.Factory</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HomeworkSix.Interface\HomeworkSix.Interface.csproj">
-      <Project>{4b649614-24f5-41d1-961d-6ed419a9b167}</Project>
-      <Name>HomeworkSix.Interface</Name>
-    </ProjectReference>
+    <Compile Include="User.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

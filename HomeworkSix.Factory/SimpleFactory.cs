@@ -1,18 +1,20 @@
-﻿using HomeworkSix.Interface;
-using HomeworkSix.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System.Configuration;
+using System.Reflection;
 
 namespace HomeworkSix.Factory
 {
     public class SimpleFactory
     {
-        public static IUserService CreateService()
+        public static T CreateService<T>(string interfaceName)
         {
-            return new UserService();
+            string factoryName = ConfigurationManager.AppSettings[interfaceName];
+            if (factoryName == null) return default(T);
+            string sNameSpace = factoryName.Split(',')[0];
+            string sClass = factoryName.Split(',')[1];
+            var instanceModel = Assembly.Load(sNameSpace);
+            var userService = (T)instanceModel.CreateInstance(sClass);
+            return userService;
         }
     }
 }

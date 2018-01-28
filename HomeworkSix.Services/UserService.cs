@@ -1,4 +1,5 @@
 ﻿using HomeworkSix.Interface;
+using HomeworkSix.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace HomeworkSix.Services
 {
     public class UserService : IUserService
     {
-        public void Register()
+        public void Register(User user)
         {
-            Console.WriteLine("Register Successful");
+            Console.WriteLine($"{user.Name} Register Successful");
         }
     }
 }

@@ -48,6 +48,10 @@
       <Project>{4b649614-24f5-41d1-961d-6ed419a9b167}</Project>
       <Name>HomeworkSix.Interface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\HomeworkSix.Model\HomeworkSix.Model.csproj">
+      <Project>{a4b159c2-4765-4151-870d-13710fb85733}</Project>
+      <Name>HomeworkSix.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,17 +1,18 @@
 ﻿using HomeworkSix.Interface;
+using HomeworkSix.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Proxy
+namespace HomeworkSix.AOP
 {
-    public class DecoratorProxy : IUserService
+    public class DecoratorAOP : IUserService
     {
         private IUserService _userService;
 
-        public DecoratorProxy(IUserService userService)
+        public DecoratorAOP(IUserService userService)
         {
             _userService = userService;
         }
@@ -21,10 +22,10 @@ namespace Proxy
             Console.WriteLine("Before Regiser");
         }
 
-        public void Register()
+        public void Register(User user)
         {
             BeforeRegister();
-            _userService.Register();
+            _userService.Register(user);
             AfterRegister();
         }
 

@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,16 +43,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleFactory.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HomeworkSix.Interface\HomeworkSix.Interface.csproj">
-      <Project>{4b649614-24f5-41d1-961d-6ed419a9b167}</Project>
-      <Name>HomeworkSix.Interface</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HomeworkSix.Services\HomeworkSix.Services.csproj">
-      <Project>{b75476f7-1c65-4921-ba10-549e9f134d4b}</Project>
-      <Name>HomeworkSix.Services</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
