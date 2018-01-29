@@ -14,7 +14,7 @@ namespace HomeworkSix.AOP
         {
             User user = new User()
             {
-                Name = "cc", Id = 1239, Password = "1234567890"
+                Name = "ELEVEN", Id = 1239, Password = "1234567890"
         };
 
             {
@@ -36,6 +36,18 @@ namespace HomeworkSix.AOP
                 IUserService userService =UnityAOP.UnityContainer.Resolve<IUserService>();
                 userService.Register(user);
 
+                Console.WriteLine("**********IOrderService**********");
+                Order order = new Order() { Id = 1, OrderNo = "201801290001", Remark = "test" };
+                IOrderService orderService = UnityAOP.UnityContainer.Resolve<IOrderService>();
+                orderService.Create(order);
+                orderService.Cancel(order);
+                orderService.Pay(order);
+                Console.WriteLine("**********IMenuService**********");
+                IMenuService menuService = UnityAOP.UnityContainer.Resolve<IMenuService>();
+                menuService.Add();
+                menuService.Delete();
+                menuService.Update();
+                menuService.Select();
                 //IUserService userService = container.Resolve<IUserService>("UserServiceEx");
                 //userService.Register();
 

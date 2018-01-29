@@ -33,5 +33,15 @@ namespace HomeworkSix.AOP
         {
             Console.WriteLine("After Regiser");
         }
+
+        public void Login(User user)
+        {
+            _userService.Login(user);
+        }
+
+        public void Logout(User user)
+        {
+            _userService.Logout(user);
+        }
     }
 }

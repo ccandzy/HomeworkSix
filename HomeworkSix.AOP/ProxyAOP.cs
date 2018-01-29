@@ -2,10 +2,6 @@
 using HomeworkSix.Interface;
 using HomeworkSix.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HomeworkSix.AOP
 {
@@ -30,13 +26,23 @@ namespace HomeworkSix.AOP
 
         public void Register(User user)
         {
-            if(_userService == null)
+            if (_userService == null)
             {
                 Init();
             }
             BeforeRegister();
             _userService.Register(user);
             AfterRegister();
+        }
+
+        public void Login(User user)
+        {
+            _userService.Login(user);
+        }
+
+        public void Logout(User user)
+        {
+            _userService.Logout(user);
         }
     }
 }

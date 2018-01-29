@@ -1,15 +1,21 @@
 ﻿using HomeworkSix.Interface;
 using HomeworkSix.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HomeworkSix.Services
 {
     public class UserService : IUserService
     {
+        public void Login(User user)
+        {
+            Console.WriteLine($"{user.Name} Login Successful");
+        }
+
+        public void Logout(User user)
+        {
+            Console.WriteLine($"{user.Name} Logout Successful");
+        }
+
         public void Register(User user)
         {
             Console.WriteLine($"{user.Name} Register Successful");

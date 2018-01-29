@@ -64,15 +64,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomAOP\AOPManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnityAOP\AfterLogHandlerAttribute.cs" />
     <Compile Include="UnityAOP\ExceptionHandlerAttribute.cs" />
     <Compile Include="UnityAOP\Handler\AfterLogHandler.cs" />
     <Compile Include="UnityAOP\Handler\ExceptionHandler.cs" />
     <Compile Include="UnityAOP\Handler\LogHandler.cs" />
+    <Compile Include="UnityAOP\Handler\SmsHandler.cs" />
     <Compile Include="UnityAOP\Handler\UserHandler.cs" />
+    <Compile Include="UnityAOP\Handler\UserNameHandler.cs" />
     <Compile Include="UnityAOP\LogHandlerAttribute.cs" />
+    <Compile Include="UnityAOP\SmsHandlerAttribute.cs" />
     <Compile Include="UnityAOP\UserHandlerAttribute.cs" />
+    <Compile Include="UnityAOP\UserNameHandlerAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
